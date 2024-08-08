@@ -45,6 +45,7 @@ def assign_namevar(name: tp.Optional[str] = None)->None:
     if (f'{name}' not in globals().keys()):
         
         globals()[f'{name}'] = None
+        print(globals()[f'{name}'])
 
 def assign_dim(name : tp.Optional[str] = None,
                nindex : tp.Optional[int] = None,
@@ -66,7 +67,7 @@ def assign_dim(name : tp.Optional[str] = None,
         
         globals()[f'{name}'] = pd.DataFrame(columns = range(ncols), index = range(nindex))
 
-    return globals().[f'{name}']
+    return globals()[f'{name}']
 
 def assign_values(name : tp.Optional[str] = None,
                   values : tp.Optional[dict] = None,)->pd.DataFrame:
@@ -83,11 +84,11 @@ def assign_values(name : tp.Optional[str] = None,
     
     if((f'{name}' in globals().keys()) and
       (values is not None) and
-      (len(values.keys()) > 0 ):
+      (len(values.keys()) > 0 )):
         
-        for idCol in range(globals().[f'{name}'].shape[1]):
+        for idCol in range(globals()[f'{name}'].shape[1]):
             
-            testCol = assign_col(f'{name}', globals().[f'{name}'].shape[0], idCol, values)
+            testCol = assign_col(f'{name}', globals()[f'{name}'].shape[0], idCol, values)
 
             if testCol is False:
                 
@@ -95,5 +96,5 @@ def assign_values(name : tp.Optional[str] = None,
                 
     del testCol
     
-    return globals().[f'{name}']
+    return globals()[f'{name}']
 
