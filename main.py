@@ -1,4 +1,4 @@
-import functions as fcts
+import functions.functions as fcts
 
 def main():
     
