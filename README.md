@@ -14,3 +14,7 @@
 ### Sources:
 - Matplotlib: https://matplotlib.org/
 
+## Pandapower
+### Sources:
+- Pandapower: https://www.pandapower.org/
+
