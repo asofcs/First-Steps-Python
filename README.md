@@ -9,3 +9,8 @@
 ## Basics_2: Classes
 ### Sources:
 - Classes: https://docs.python.org/3/tutorial/classes.html
+
+## Basics_3: Matplotlib
+### Sources:
+- Matplotlib: https://matplotlib.org/
+
