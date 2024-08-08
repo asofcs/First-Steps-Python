@@ -6,9 +6,8 @@ setup(
   author=@asofcs,
   licence="MIT",
   packages=['First_Steps_Python'], 
-  install_requires=[], # external dependencies,
+  install_requires=['pandas==2.2.2'], # external dependencies,
   scripts=[
-           'functions/x', 
-           'functions/y',
+           'functions/functions.py', 
           ]
 )
