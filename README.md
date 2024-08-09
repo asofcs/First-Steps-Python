@@ -13,9 +13,11 @@
 - Built-in Exceptions: https://docs.python.org/3.11/library/exceptions.html
 
 
-## Basics_3: Matplotlib
+## Basics_3: Matplotlib and sklearn.datasets
 ### Sources:
 - Matplotlib: https://matplotlib.org/
+- sklearn.datasets: https://scikit-learn.org/stable/datasets.html#datasets
+
 
 ## Pandapower
 ### Sources:
