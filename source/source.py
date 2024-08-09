@@ -166,7 +166,7 @@ class PdDataframe:
     
     def fill_df(self, name, ncols, nindex, values):
         self.__add__attributes(name, ncols, nindex,values)
-        self. __assign_dim()
+        self.__assign_dim()
         self.__assign_values()
 
         
