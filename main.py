@@ -1,8 +1,4 @@
-import sys
-import os
-# import functions.functions as fcts
-sys.path.append(os.sep.join([os.getcwd(), "functions"]))
-import functions as fcts
+import functions.functions as fcts
 
 def main():
     
