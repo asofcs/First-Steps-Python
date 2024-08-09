@@ -1,4 +1,8 @@
-from source.source import PdDataframe
+import sys
+import os
+#from source.source import PdDataframe
+sys.path.append(os.sep.join([os.getcwd(), "source"]))
+from source import PdDataframe
 
 def main():
     
