@@ -1,4 +1,4 @@
-import sklearn 
+import sklearn.datasets 
 import typing 
 import numpy
 import pandas 
