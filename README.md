@@ -7,13 +7,13 @@
 - Structure of the Repository : https://docs.python-guide.org/writing/structure/
 
 
-## Basics_2: Classes and Exceptions
+## [Basics_2: Classes and Exceptions](https://github.com/asofcs/First_Steps_Python/tree/Basics_2)
 ### Sources:
 - Classes: https://docs.python.org/3/tutorial/classes.html
 - Built-in Exceptions: https://docs.python.org/3.11/library/exceptions.html
 
 
-## Basics_3: Matplotlib and sklearn.datasets
+## [Basics_3: Matplotlib and sklearn.datasets](https://github.com/asofcs/First_Steps_Python/tree/Basics_3)
 ### Sources:
 - Matplotlib: https://matplotlib.org/
 - sklearn.datasets: https://scikit-learn.org/stable/datasets.html#datasets
