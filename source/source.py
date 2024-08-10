@@ -1,11 +1,11 @@
-import sklearn.datasets as dts
-import typing as tp
-import numpy as np
-import pandas as pd
+import sklearn 
+import typing 
+import numpy
+import pandas 
 
 
 
-def load_dataset(name: tp.Optional[str] = None,)-> np.ndarray:
+def load_dataset(name: typing.Optional[str] = None,)-> numpy.ndarray:
     
     testFlag = False
     dtNew = None
@@ -26,29 +26,29 @@ def load_dataset(name: tp.Optional[str] = None,)-> np.ndarray:
         
         match name:
             case 'iris':
-                dtNew = dts.load_iris()
+                dtNew = sklearn.datasets.load_iris()
             case 'diabetes':
-                dtNew = dts.load_diabetes()
+                dtNew = sklearn.datasets.load_diabetes()
             case 'digits':
-                dtNew = dts.load_digits()
+                dtNew = sklearn.datasets.load_digits()
             case 'wine':
-                dtNew = dts.load_wine()
+                dtNew = sklearn.datasets.load_wine()
             case 'linnerud':
-                dtNew = dts.load_linnerud()
+                dtNew = sklearn.datasets.load_linnerud()
             case 'breast_cancer':
-                dtNew = dts.load_breast_cancer()
+                dtNew = sklearn.datasets.load_breast_cancer()
 
     del testFlag
     return dtNew
 
 
-def dataset_info(name: tp.Optional[str] = None,
-                 data: tp.Optional[bool] = False,
-                 target: tp.Optional[bool] = False,
-                 target_names: tp.Optional[bool] = False,
-                 feature_names: tp.Optional[bool] = False,
-                 filename: tp.Optional[bool] = False, 
-                 description: tp.Optional[bool] = False):
+def dataset_info(name: typing.Optional[str] = None,
+                 data: typing.Optional[bool] = False,
+                 target: typing.Optional[bool] = False,
+                 target_names: typing.Optional[bool] = False,
+                 feature_names: typing.Optional[bool] = False,
+                 filename: typing.Optional[bool] = False, 
+                 description: typing.Optional[bool] = False):
     
 
     
@@ -94,7 +94,7 @@ def dataset_info(name: tp.Optional[str] = None,
     del testFlag
     del dtNew
 
-def dataset2df(name: tp.Optional[str] = None)->pd.DataFrame:
+def dataset2df(name: typing.Optional[str] = None)->pandas.DataFrame:
 
     testFlag = False
     dtNew = None
@@ -123,13 +123,13 @@ def dataset2df(name: tp.Optional[str] = None)->pd.DataFrame:
             targetDf = None
 
             
-            dataDf = pd.DataFrame(data = dtNew['data'], 
+            dataDf = pandas.DataFrame(data = dtNew['data'], 
                                   columns = dtNew['feature_names'])
 
-            targetDf = pd.DataFrame(data = dtNew['target'])
+            targetDf = pandas.DataFrame(data = dtNew['target'])
             targetDf = targetDf.rename(columns = {0: 'target'})
 
-            dfNew  = pd.concat([dataDf, targetDf], axis = 1)
+            dfNew  = pandas.concat([dataDf, targetDf], axis = 1)
             dfNew.dropna(how ='any', axis = 0, inplace = True)
            
             print('\n\tFirst values of the data:\n',dfNew.head())
