@@ -1,7 +1,7 @@
-import typing as tp
-import pandas as pd
+import typing
+import pandas 
 
-def check_instance(var : tp.Any , xtype : tp.Any, verror : tp.Any)->tp.Any:
+def check_instance(var : typing.Any , xtype : typing.Any, verror : typing.Any)->typing.Any:
     
     """ Check instance/type of a variable
     
@@ -26,7 +26,7 @@ def check_instance(var : tp.Any , xtype : tp.Any, verror : tp.Any)->tp.Any:
 
 
 
-class PdDataframe:
+class pandasDataframe:
     
     """ DataFrame
     
@@ -39,7 +39,7 @@ class PdDataframe:
 
     # methods:
     #  __init__: constructor.
-    #  __add_attributes: update attributes (private).
+    #  __add_attributes: upandasate attributes (private).
     #  __assign_dim: create empty dataframe with required dimensions - nindex and ncols (private).
     #  __assign_col: fill column with index icol (private).
     #  __assign_values: fill dataframe by columns (private).
@@ -64,7 +64,7 @@ class PdDataframe:
                           nindex,
                           values):
         
-        """  __add__attributes: update attributes.
+        """  __add__attributes: upandasate attributes.
         
         # parameters:
         #   self: class. 
@@ -73,14 +73,14 @@ class PdDataframe:
         #   nindex: total number of indexes. Type: int.
         #   values: dictionary with values to fill. Type: dict. key: column, list of values: values to fill.
     
-        # return: IF success: Update attributes. ELSE: -
+        # return: IF success: Upandasate attributes. ELSE: -
         """
         
         self.name =  check_instance(name ,str, None)
         self.ncols = check_instance(ncols, int, 0)
         self.nindex = check_instance(nindex, int, 0)
         self.values = check_instance(values, dict, None)
-        self.df =  check_instance(pd.DataFrame(data = None), pd.DataFrame, None)
+        self.df =  check_instance(pandas.DataFrame(data = None), pandas.DataFrame, None)
         
     
     def __assign_dim(self):
@@ -97,7 +97,7 @@ class PdDataframe:
             
             if ((self.ncols > 0) and (self.nindex > 0)):
                 
-                self.df = pd.DataFrame(columns = range(self.ncols), index = range(self.nindex))
+                self.df = pandas.DataFrame(columns = range(self.ncols), index = range(self.nindex))
                 
             else:
                 
