@@ -1,5 +1,7 @@
 # First_Steps_Python
 
+Interface: [JupyterLab - JupyterLite](https://jupyter.org/)
+
 ## [Basics_1: Introduction and Functions](https://github.com/asofcs/First_Steps_Python/tree/Basics_1)
 ### Sources:
 - Built-in functions: https://docs.python.org/3.11/library/functions.html
