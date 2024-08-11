@@ -1,26 +1,25 @@
+import networkx
 import pandapower
-import typing 
-#import numpy
-#import pandas 
-#import matplotlib.pyplot
+import typing
 
 
 
-def load_network(name: typing.Optional[str] = None,)-> net:
-    
+
+def load_network(name: typing.Optional[str] = None,)-> pandapower.auxiliary.pandapowerNet:
+
     """ Load network from the pandapower.networks package (Power System Test Cases)
-    
+
     # parameters:
     #  name: name of network to import. Type: str.
 
     # return: IF success: network. ELSE: None
     """
-    
+
     testFlag = False
     dtNew = None
-    
+
     try:
-        
+
         if (isinstance(name, str) and (name in ['case4gs','case6ww','case9',
                                                 'case14','case30','case33bw',
                                                 'case39','case57','case89pegase',
@@ -29,13 +28,13 @@ def load_network(name: typing.Optional[str] = None,)-> net:
                                                 'case2869pegase','case3120sp','case6470rte',
                                                 'case6495rte','case6515rte','case9241pegase',
                                                 'GBnetwork','GBreducednetwork','iceland'])):
-            
+
             testFlag = True
-        
+
         else:
             raise Exception
 
-            
+
     except(Exception, ValueError, TypeError):
         print(f'Invalid dataset - {name} - (load_dataset)')
 
@@ -92,3 +91,140 @@ def load_network(name: typing.Optional[str] = None,)-> net:
 
     del testFlag
     return dtNew
+
+
+def network_info(name: typing.Optional[str] = None,
+                 bus: typing.Optional[bool] = False,
+                 load: typing.Optional[bool] = False,
+                 gen: typing.Optional[bool] = False,
+                 ext_grid: typing.Optional[bool] = False,
+                 line: typing.Optional[bool] = False,
+                 trafo: typing.Optional[bool] = False,
+                 poly_cost: typing.Optional[bool] = False,
+                 bus_geodata: typing.Optional[bool] = False):
+
+    """ Print attribute from network if flag is True.
+
+    # parameters:
+    #  name: name of network. Type: str.
+    #  bus: bus flag. Type: bool.
+    #  load: load flag. Type: bool.
+    #  gen: generators flag. Type: bool.
+    #  ext_grid: external grids flag. Type: bool.
+    #  line: lines flag. Type: bool.
+    #  trafo: transformers flag. Type: bool.
+    #  poly_cost:  cost functions flag. Type: bool.
+    #  bus_geodata: geodata for buses flag. Type: bool.
+
+    # return: -
+    """
+
+    testFlag = False
+    dtNew = None
+
+    try:
+        dtNew = load_network(name)
+
+        if (dtNew is not None):
+
+            testFlag = True
+
+        else:
+            raise Exception
+
+    except(Exception, ValueError, TypeError):
+        print(f'Invalid network - {name} (network_info)')
+
+
+    if testFlag is True:
+        print('\n\tDATA DESCRIPTION:\n')
+
+        if ((hasattr(dtNew, 'bus')) and (bus is True)):
+            print('The bus data:\n', dtNew['bus'])
+
+        if ((hasattr(dtNew, 'load')) and (load is True)):
+            print('The load data:\n',dtNew['load'])
+
+        if ((hasattr(dtNew, 'gen')) and (gen is True)):
+            print('The generators data:\n',dtNew['gen'])
+
+        if ((hasattr(dtNew, 'ext_grid')) and (ext_grid is True)):
+            print('The external grids data:\n',dtNew['ext_grid'])
+
+        if ((hasattr(dtNew, 'line')) and (ext_grid is True)):
+            print('The lines data:\n',dtNew['line'])
+
+        if ((hasattr(dtNew, 'trafo')) and (trafo  is True)):
+            print('The transformers data:\n',dtNew['trafo'])
+
+        if ((hasattr(dtNew, 'poly_cost')) and (poly_cost is True)):
+            print('The cost functions\n',dtNew['poly_cost'])
+
+        if ((hasattr(dtNew, 'bus_geodata')) and (bus_geodata is True)):
+            print('The geodata for buses:\n',dtNew['bus_geodata'])
+
+    del testFlag
+    del dtNew
+
+
+def network_functions(name: typing.Optional[str] = None,
+                      func_name: typing.Optional[str] = None,
+                      func_args: typing.Optional[tuple] = (),):
+    """
+    Run powerflow or topology.
+    
+    # parameters:
+    #  name: name of the network. Type: str.
+    #  func_name: function to run. Type: str
+    #  func_args: arguments possible to the function. Type: tuple.
+    #  Link powerflow: https://pandapower.readthedocs.io/en/latest/powerflow/ac.html
+    #  Link topology: https://pandapower.readthedocs.io/en/latest/topology/searches.html
+    #  Link networkx: https://networkx.org/documentation/stable/reference/introduction.html 
+
+    # return: -
+    """
+
+    testFlag = False
+    dtNew = None
+
+    try:
+        dtNew = load_network(name)
+
+        if (dtNew is not None):
+
+            testFlag = True
+
+        else:
+            raise Exception
+
+    except(Exception, ValueError, TypeError):
+        print(f'Invalid network - {name} (network_functions)')
+
+    if testFlag is True:
+        match func_name:
+        
+            case 'pf':
+
+                print('\n\tRun Power Flow:\n')
+                pandapower.runpp(dtNew, *func_args)
+                print(dtNew.res_bus)
+
+            case 'top':
+                
+                print('\n\tRun Topology:\n')
+                mgraph = pandapower.topology.create_nxgraph(dtNew, *func_args)
+
+                print('Edges:\n')
+                try:
+                  for id, val in enumerate(list(mgraph.edges)):
+                    print(f'{id} -- {val}')
+                except: pass
+
+                print('Nodes:\n')
+                try:
+                  for id, val in enumerate(list(mgraph.nodes)):
+                    print(f'{id} -- {val}')
+                except: pass
+    
+    del testFlag
+    del dtNew        
