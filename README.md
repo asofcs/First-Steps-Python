@@ -23,5 +23,4 @@ Interface: [JupyterLab](https://jupyter.org/)
 
 ## Pandapower
 ### Sources:
-- Pandapower: https://www.pandapower.org/
-
+- Pandapower: https://www.pandapower.org/](https://github.com/e2nIEE/pandapower/tree/develop
