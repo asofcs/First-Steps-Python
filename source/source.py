@@ -6,37 +6,58 @@ import matplotlib.pyplot
 
 
 
-def heat_map(xLegend, yLegend, sTitle, valMatrix):
+def heat_map(xLegend: typing.Optional[list] = None, yLegend: typing.Optional[list] = None,
+             sTitle: typing.Optional[str] = None, valMatrix: typing.Optional[numpy.ndarray] = None):
+     
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
 
-        #https://matplotlib.org/stable/gallery/images_contours_and_fields/image_annotated_heatmap.html
+    # return: -
+    # LINK: https://matplotlib.org/stable/gallery/images_contours_and_fields/image_annotated_heatmap.html
+    """
         
-        fig, ax = matplotlib.pyplot.subplots()
-        im = ax.imshow(valMatrix)
+    fig, ax = matplotlib.pyplot.subplots()
+    im = ax.imshow(valMatrix)
 
         
-        # Show all ticks and label them with the respective list entries
-        ax.set_xticks(numpy.arange(len(xLegend)), labels = xLegend)
-        ax.set_yticks(numpy.arange(len(yLegend)), labels = yLegend)
+    # Show all ticks and label them with the respective list entries
+    ax.set_xticks(numpy.arange(len(xLegend)), labels = xLegend)
+    ax.set_yticks(numpy.arange(len(yLegend)), labels = yLegend)
         
-        # Rotate the tick labels and set their alignment.
-        matplotlib.pyplot.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
+    # Rotate the tick labels and set their alignment.
+    matplotlib.pyplot.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
 
-        # Loop over data dimensions and create text annotations.
-        for i in range(len(yLegend)):
-            for j in range(len(xLegend)):
-                text = ax.text(j, i, round(valMatrix[i, j], 2), ha="center", va="center", color="w")
+    # Loop over data dimensions and create text annotations.
+    for i in range(len(yLegend)):
+        for j in range(len(xLegend)):
+            text = ax.text(j, i, round(valMatrix[i, j], 2), ha="center", va="center", color="w")
 
 
-        ax.set_title(sTitle)
-        fig.tight_layout()
-        matplotlib.pyplot.show()
+    ax.set_title(sTitle)
+    fig.tight_layout()
+    matplotlib.pyplot.show()
+    
 
     
 
 
 def create_map_dict (origList: typing.Optional[list] = None,
                      finalList: typing.Optional[list] = None,):
+    
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
 
+    # return: IF success: var. ELSE: verror
+    """
+    
     dMap = None
     
     if((origList is not None) and (finalList is not None)):
@@ -51,6 +72,17 @@ def create_map_dict (origList: typing.Optional[list] = None,
 
 def inv_map(origMap: typing.Optional[dict] = None,)->dict: 
 
+    
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
+
+    # return: IF success: var. ELSE: verror
+    """
+    
     invMap = dict()
     testFlag = False 
     
@@ -77,6 +109,16 @@ def inv_map(origMap: typing.Optional[dict] = None,)->dict:
                 
 
 def load_dataset(name: typing.Optional[str] = None,)-> numpy.ndarray:
+    
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
+
+    # return: IF success: var. ELSE: verror
+    """
     
     testFlag = False
     dtNew = None
@@ -121,7 +163,15 @@ def dataset_info(name: typing.Optional[str] = None,
                  filename: typing.Optional[bool] = False, 
                  description: typing.Optional[bool] = False):
     
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
 
+    # return: IF success: var. ELSE: verror
+    """
     
     testFlag = False
     dtNew = None
@@ -167,6 +217,16 @@ def dataset_info(name: typing.Optional[str] = None,
 
 def dataset2df(name: typing.Optional[str] = None)->dict:
 
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
+
+    # return: IF success: var. ELSE: verror
+    """
+    
     testFlag = False
     dtNew = None
     dfNew = None
@@ -226,6 +286,17 @@ def dataset2df(name: typing.Optional[str] = None)->dict:
     return dFinal
 
 def dataset_analysis(dFinal: typing.Optional[dict] = None):
+    
+    """ Check instance/type of a variable
+    
+    # parameters:
+    #  var: variable to check
+    #  xtype: type expected
+    #  verror: error value
+
+    # return: IF success: var. ELSE: verror
+    """
+    
     testFlag = False
     invMap = dict()
     auxDf = None
