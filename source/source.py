@@ -9,14 +9,16 @@ import matplotlib.pyplot
 def heat_map(xLegend: typing.Optional[list] = None, yLegend: typing.Optional[list] = None,
              sTitle: typing.Optional[str] = None, valMatrix: typing.Optional[numpy.ndarray] = None):
      
-    """ Check instance/type of a variable
+    """ Plot a heat map
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
+    #  xLegend: legend of axis x. Type: list.
+    #  yLegend: legend of axis y. Type: list.
+    #  sTitle: Title. Type: str.
+    #  valMatrix: Matrix with values to plot. Type: numpy.ndarray
 
-    # return: -
+
+    # return: - 
     # LINK: https://matplotlib.org/stable/gallery/images_contours_and_fields/image_annotated_heatmap.html
     """
         
@@ -48,14 +50,13 @@ def heat_map(xLegend: typing.Optional[list] = None, yLegend: typing.Optional[lis
 def create_map_dict (origList: typing.Optional[list] = None,
                      finalList: typing.Optional[list] = None,):
     
-    """ Check instance/type of a variable
+    """ Create dictionary from two lists, to map a dataframe.
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
+    #  origList: list of the original values (keys).
+    #  finalList: list of the final values (values).
 
-    # return: IF success: var. ELSE: verror
+    # return: IF success: filled dictionary. ELSE: empty dictionary
     """
     
     dMap = None
@@ -73,14 +74,12 @@ def create_map_dict (origList: typing.Optional[list] = None,
 def inv_map(origMap: typing.Optional[dict] = None,)->dict: 
 
     
-    """ Check instance/type of a variable
+    """ Reverse a dictionary to map a dataframe.
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
+    #  origMap: original dictionary. Type: dict
 
-    # return: IF success: var. ELSE: verror
+    # return: IF success: reversed dictionary. ELSE: empty dictionary.
     """
     
     invMap = dict()
@@ -110,14 +109,12 @@ def inv_map(origMap: typing.Optional[dict] = None,)->dict:
 
 def load_dataset(name: typing.Optional[str] = None,)-> numpy.ndarray:
     
-    """ Check instance/type of a variable
+    """ Load dataset from the sklearn.datasets package 
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
+    #  name: name of dataset to import. Type: str.
 
-    # return: IF success: var. ELSE: verror
+    # return: IF success: dataset (data, target, target_names, feature_names, filename, description). ELSE: None
     """
     
     testFlag = False
