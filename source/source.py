@@ -21,7 +21,7 @@ def load_network(name: typing.Optional[str] = None,)-> net:
     
     try:
         
-        if (isinstance(name, str) and (name in ['case4gs','case5','case6ww','case9',
+        if (isinstance(name, str) and (name in ['case4gs','case6ww','case9',
                                                 'case14','case24_ieee_rts','case30','case_ieee30',
                                                 'case33bw','case39','case57','case89pegase',
                                                 'case118','case145','case_illinois200','case300',
@@ -42,8 +42,6 @@ def load_network(name: typing.Optional[str] = None,)-> net:
         match name:
             case 'case4gs':
                 dtNew = pandapower.networks.case4gs()
-            case 'case5':
-                dtNew = pandapower.networks.case5()
             case 'case6ww':
                 dtNew = pandapower.networks.case9()
             case 'case9':
