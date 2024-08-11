@@ -21,6 +21,6 @@ Interface: [JupyterLab](https://jupyter.org/)
 - sklearn.datasets: https://scikit-learn.org/stable/datasets.html#datasets
 - Iris-Data-Walkthrough: https://github.com/jewelbritton/Iris-Data-Walkthrough
 
-## Pandapower
+## [Pandapower](https://github.com/asofcs/First_Steps_Python/tree/Pandapower)
 ### Sources:
-- Pandapower: https://www.pandapower.org/](https://github.com/e2nIEE/pandapower/tree/develop
+- Pandapower: https://github.com/e2nIEE/pandapower/tree/develop
