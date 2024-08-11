@@ -48,7 +48,7 @@ def heat_map(xLegend: typing.Optional[list] = None, yLegend: typing.Optional[lis
 
 
 def create_map_dict (origList: typing.Optional[list] = None,
-                     finalList: typing.Optional[list] = None,):
+                     finalList: typing.Optional[list] = None,)->dict:
     
     """ Create dictionary from two lists, to map a dataframe.
     
@@ -66,8 +66,6 @@ def create_map_dict (origList: typing.Optional[list] = None,
         if (len(origList) == len(finalList)):
 
             dMap = {elem : finalList[idVal] for idVal, elem in enumerate(sorted(origList))}
-
-    
 
     return dMap
 
@@ -107,7 +105,7 @@ def inv_map(origMap: typing.Optional[dict] = None,)->dict:
 
                 
 
-def load_dataset(name: typing.Optional[str] = None,)-> numpy.ndarray:
+def load_dataset(name: typing.Optional[str] = None,)-> sklearn.utils.Bunch:
     
     """ Load dataset from the sklearn.datasets package 
     
@@ -160,14 +158,18 @@ def dataset_info(name: typing.Optional[str] = None,
                  filename: typing.Optional[bool] = False, 
                  description: typing.Optional[bool] = False):
     
-    """ Check instance/type of a variable
+    """ Print attribute from dataset if flag is True.
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
+    #  name: name of dataset. Type: str.
+    #  data: data flag. Type: bool.
+    #  target: target flag. Type: bool.
+    #  target_names: target_names flag. Type: bool.
+    #  feature_names: feature_names flag. Type: bool.
+    #  filename: filename flag. Type: bool.
+    #  description: description flag. Type: bool.
 
-    # return: IF success: var. ELSE: verror
+    # return: -
     """
     
     testFlag = False
@@ -182,7 +184,6 @@ def dataset_info(name: typing.Optional[str] = None,
         
         else:
             raise Exception
-
             
     except(Exception, ValueError, TypeError):
         print(f'Invalid dataset - {name} (dataset_info)')
@@ -214,14 +215,13 @@ def dataset_info(name: typing.Optional[str] = None,
 
 def dataset2df(name: typing.Optional[str] = None)->dict:
 
-    """ Check instance/type of a variable
+    """ data and target from dataset to dataframe (Alternative to - load_X(as_frame = True))
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
-
-    # return: IF success: var. ELSE: verror
+    #  name: name of dataset. Type: str.
+ 
+    # return: IF success: dictionary with dataframe and dictionary (key: old values of target, values: new values of target). 
+    #         ELSE: empty dictionary
     """
     
     testFlag = False
@@ -284,14 +284,12 @@ def dataset2df(name: typing.Optional[str] = None)->dict:
 
 def dataset_analysis(dFinal: typing.Optional[dict] = None):
     
-    """ Check instance/type of a variable
+    """ Print the analysis of the dataset (heat map and statistics)
     
     # parameters:
-    #  var: variable to check
-    #  xtype: type expected
-    #  verror: error value
+    #  dFinal: dictionary with dataframe and dictionary (key: old values of target, values: new values of target).
 
-    # return: IF success: var. ELSE: verror
+    # return: -
     """
     
     testFlag = False
@@ -333,5 +331,3 @@ def dataset_analysis(dFinal: typing.Optional[dict] = None):
     del testFlag
     del invMap
     del auxDf
-
-## add comments and parameters in heat_map
