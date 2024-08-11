@@ -1,5 +1,7 @@
-#import pandas
 import functions.functions as fcts
+#import functions as fcts
+#import pandas
+
 
 def main():
     
