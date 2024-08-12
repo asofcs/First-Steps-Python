@@ -12,7 +12,7 @@ def main():
     scr.network_functions('case39', 'pf', ())
     
     # run topology - respect_switches=True, include_lines=False (See args in https://pandapower.readthedocs.io/en/latest/topology/create_graph.html)
-    scr.network_functions('case39', 'top', ())
+    scr.network_functions('case39', 'top', (True, False))
   
 if __name__ == "__main__":
     main()
