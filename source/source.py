@@ -174,7 +174,7 @@ def network_functions(name: typing.Optional[str] = None,
     # parameters:
     #  name: name of the network. Type: str.
     #  func_name: function to run. Type: str
-    #  func_args: arguments possible to the function. Type: tuple.
+    #  func_args: arguments possible to the function. Type: tuple. Examples: (), (True,), (True, False)
     #  Link powerflow: https://pandapower.readthedocs.io/en/latest/powerflow/ac.html
     #  Link topology: https://pandapower.readthedocs.io/en/latest/topology/searches.html
     #  Link networkx: https://networkx.org/documentation/stable/reference/introduction.html 
