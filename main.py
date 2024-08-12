@@ -8,10 +8,10 @@ def main():
     network_info('case39', True, True, True,
                  True, True, True, True,
                  True)
-    # run pf
+    # run pf (See args in https://pandapower.readthedocs.io/en/latest/powerflow/ac.html)
     network_functions('case39', 'pf', ())
     
-    # run topology
+    # run topology - respect_switches=True, include_lines=False (See args in https://pandapower.readthedocs.io/en/latest/topology/create_graph.html)
     network_functions('case39', 'top', ())
   
 if __name__ == "__main__":
