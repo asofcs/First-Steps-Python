@@ -1,8 +1,6 @@
 import networkx
 import pandapower
 import typing
-# corrigir args
-
 
 
 def load_network(name: typing.Optional[str] = None,)-> pandapower.auxiliary.pandapowerNet:
@@ -190,7 +188,7 @@ def network_functions(name: typing.Optional[str] = None,
     try:
         dtNew = load_network(name)
 
-        if (dtNew is not None):
+        if (dtNew is not None) and (len(func_args) == 0 or (len(func_args)) >= 2):
 
             testFlag = True
 
@@ -198,7 +196,7 @@ def network_functions(name: typing.Optional[str] = None,
             raise Exception
 
     except(Exception, ValueError, TypeError):
-        print(f'Invalid network - {name} (network_functions)')
+        print(f'Invalid network - {name} (network_functions -  {func_name})')
 
     if testFlag is True:
         match func_name:
