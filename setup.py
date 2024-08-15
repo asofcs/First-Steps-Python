@@ -6,7 +6,7 @@ setup(
   author=@asofcs,
   licence="MIT",
   packages=['First_Steps_Python'], 
-  install_requires=['network==3.3', 
+  install_requires=['networkx==3.3', 
                     'pandapower==2.14.9',], # external dependencies,
   scripts=[
            'source/source.py', 
