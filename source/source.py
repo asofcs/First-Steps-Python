@@ -309,7 +309,7 @@ def dataset_analysis(dFinal: typing.Optional[dict] = None):
             
     except(Exception, ValueError, TypeError):
         
-        print(f'Invalid dictionary - {name} (dataset_analysis)')
+        print(f'Invalid dictionary - {dFinal} (dataset_analysis)')
 
     if testFlag is True:
         
