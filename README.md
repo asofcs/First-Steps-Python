@@ -7,5 +7,6 @@
 - Iris-Data-Walkthrough: https://github.com/jewelbritton/Iris-Data-Walkthrough
 - sklearn.preprocessing: https://scikit-learn.org/stable/api/sklearn.preprocessing.html
 
-  ![image](https://github.com/user-attachments/assets/5634355c-7e43-4817-90d8-388ff169f572)
+ ![image](https://github.com/user-attachments/assets/8dba4502-fbca-4413-83f6-f6686a1e027c)
+
 
