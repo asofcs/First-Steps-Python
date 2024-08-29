@@ -28,6 +28,9 @@ Interface: [JupyterLab](https://jupyter.org/)
 - Iris-Data-Walkthrough: https://github.com/jewelbritton/Iris-Data-Walkthrough
 - sklearn.preprocessing: https://scikit-learn.org/stable/api/sklearn.preprocessing.html
 
+![image](https://github.com/user-attachments/assets/ecbd95e5-c296-45e1-ad5f-74390fa2691a)
+
+
 ## [Pandapower](https://github.com/asofcs/First_Steps_Python/tree/Pandapower)
 ### Sources:
 - Pandapower: https://github.com/e2nIEE/pandapower/tree/develop
