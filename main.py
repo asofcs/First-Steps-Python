@@ -6,7 +6,7 @@ def main():
     new_model = ModelClassification()
     new_model.set_model("iris","GBoost",
                         "MinMax", True,
-                        False, False,
+                        True, False,
                         False, False,
                         False)
     del new_model
