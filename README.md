@@ -6,3 +6,6 @@
 - sklearn.datasets: https://scikit-learn.org/stable/datasets.html#datasets
 - Iris-Data-Walkthrough: https://github.com/jewelbritton/Iris-Data-Walkthrough
 - sklearn.preprocessing: https://scikit-learn.org/stable/api/sklearn.preprocessing.html
+
+  ![image](https://github.com/user-attachments/assets/5634355c-7e43-4817-90d8-388ff169f572)
+
