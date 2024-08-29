@@ -39,7 +39,7 @@ class pandasDataframe:
 
     # methods:
     #  __init__: constructor.
-    #  __add_attributes: upandasate attributes (private).
+    #  __add_attributes: update attributes (private).
     #  __assign_dim: create empty dataframe with required dimensions - nindex and ncols (private).
     #  __assign_col: fill column with index icol (private).
     #  __assign_values: fill dataframe by columns (private).
@@ -64,7 +64,7 @@ class pandasDataframe:
                           nindex,
                           values):
         
-        """  __add__attributes: upandasate attributes.
+        """  __add__attributes: update attributes.
         
         # parameters:
         #   self: class. 
@@ -73,7 +73,7 @@ class pandasDataframe:
         #   nindex: total number of indexes. Type: int.
         #   values: dictionary with values to fill. Type: dict. key: column, list of values: values to fill.
     
-        # return: IF success: Upandasate attributes. ELSE: -
+        # return: IF success: Update attributes. ELSE: -
         """
         
         self.name =  check_instance(name ,str, None)
