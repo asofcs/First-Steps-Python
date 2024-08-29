@@ -23,7 +23,7 @@ Interface: [JupyterLab](https://jupyter.org/)
 
 ## [Basics_4: Multiclass Model and sklearn.datasets](https://github.com/asofcs/First_Steps_Python/tree/Basics_4)
 ### Sources:
-- Multiclass and multioutput algorithms: https://matplotlib.org/](https://scikit-learn.org/stable/modules/multiclass.html
+- Multiclass and multioutput algorithms: https://scikit-learn.org/stable/modules/multiclass.html
 - sklearn.datasets: https://scikit-learn.org/stable/datasets.html#datasets
 - Iris-Data-Walkthrough: https://github.com/jewelbritton/Iris-Data-Walkthrough
 - sklearn.preprocessing: https://scikit-learn.org/stable/api/sklearn.preprocessing.html
