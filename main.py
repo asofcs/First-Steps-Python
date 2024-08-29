@@ -1,4 +1,6 @@
 from scripts.model import ModelClassification
+# import pandas
+# import sklearn
 
 def main():
     new_model = ModelClassification()
