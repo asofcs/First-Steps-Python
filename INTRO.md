@@ -25,5 +25,9 @@
 - *Examples of more complex architectures include neural networks, which consist of multiple layers of interconnected artificial neurons, with each layer performing computations and passing signals to the next layer.*
 - *The post hoc approach therefore seems more appropriate for complex systems.*
 
+# Post Hoc Explanation Approaches:
+- *Feature relevance explanations: aim to measure the importance of a model’s inputs to its output. This results in an importance score ranking, where higher scores mean that the
+corresponding variable was more relevant for the model . E.g., SHapley Additive exPlanation (SHAP).*
+- *Local explanations: approximate the model in a narrow area around a specific instance of interest . The resulting explanations do not necessarily generalize to a global scale but approximate the model around the instance the user wants to explain . E.g., Anchors and Diverse Counterfactual Explanations (DiCE).*
 
 
