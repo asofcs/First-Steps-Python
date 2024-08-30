@@ -7,3 +7,4 @@
 - EU Artificial Intelligence Act: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
 - Explainable AI lacks regulative reasons: why AI and human decision‑making are not equally opaque: https://doi.org/10.1007/s43681-022-00217-w
 - Interpretable AI: Building explainable machine learning systems: https://ieeexplore.ieee.org/document/10280544
+- DeepObfuscation: Securing the Structure of Convolutional Neural Networks via Knowledge Distillation: https://doi.org/10.48550/arXiv.1806.10313
