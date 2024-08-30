@@ -16,7 +16,7 @@
 - *Interpretability can be provided at different levels: for the whole model, for individual components (e.g., input parameters), or at the level of a particular training algorithm.*
 - *Two examples of “white box” models are decision trees, and linear regression.*
 ## Black Box
-- *Black box models are not explainable by themselves. The lack of explainability might result from an intentional obfuscation from the system designer (Xu, 2018), or from the complexity of the model.*
+- *Black box models are not explainable by themselves. The lack of explainability might result from an intentional obfuscation from the system designer, or from the complexity of the model.*
 - *Certain types of AI present specific difficulties due to their inherent complexity and lack of interpretability.*
 - *Examples of more complex architectures include neural networks, which consist of multiple layers of interconnected artificial neurons, with each layer performing computations and passing signals to the next layer*
 - *The post hoc approach therefore seems more appropriate for complex systems*
