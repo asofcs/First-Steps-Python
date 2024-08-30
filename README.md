@@ -34,6 +34,7 @@ Interface: [JupyterLab](https://jupyter.org/)
 ### Sources:
 - TechDispatch #2/2023 - Explainable Artificial Intelligence: https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf
 - EU Artificial Intelligence Act: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+- Explainable AI lacks regulative reasons: why AI and human decision‑making are not equally opaque: https://doi.org/10.1007/s43681-022-00217-w
 
 ## [Pandapower](https://github.com/asofcs/First_Steps_Python/tree/Pandapower)
 ### Sources:
