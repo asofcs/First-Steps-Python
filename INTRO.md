@@ -7,7 +7,9 @@
 - *Refers to the ability for a specific model to be understood. In the strictest sense, a model is transparent if a person can contemplate the entire model at once.*
   
 # White Box and Black Box
-## White Box
+## White Box:
+- *In “white box” models, the algorithms used are straightforward to understand and it is possible to interpret how the input features are transformed into the output or target variable. The most important features for predicting the target variable can be identified, and these features are understandable.*
+- *Two examples of “white box” models are decision trees, and linear regression.*
 ## Black Box
 
 # Interpretability and Explainability
