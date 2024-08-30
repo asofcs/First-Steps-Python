@@ -30,6 +30,11 @@ Interface: [JupyterLab](https://jupyter.org/)
 
 ![image](https://github.com/user-attachments/assets/c635eeae-5ac6-4525-99bf-487e68bc42a6)
 
+## [Basics_5: Interpretability and Explainability](https://github.com/asofcs/First_Steps_Python/tree/Basics_5)
+### Sources:
+- TechDispatch #2/2023 - Explainable Artificial Intelligence: https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf
+- EU Artificial Intelligence Act: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+
 ## [Pandapower](https://github.com/asofcs/First_Steps_Python/tree/Pandapower)
 ### Sources:
 - Pandapower: https://github.com/e2nIEE/pandapower/tree/develop
