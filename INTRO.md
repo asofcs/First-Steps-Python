@@ -8,7 +8,11 @@
 
 # Interpretability and Explainability
 ## Interpretability
+- *Interpretability refers to the degree of human comprehensibility of a given black box model or decision*
+- *Interpretable AI models allow humans to estimate what a model will predict given an input, and understand when the model has made a mistake.*
 ## Explainability
+- *Explainability in AI concentrates on providing clear and coherent explanations for specific model predictions or decisions.*
+- *Explainability is particularly important in critical applications where human lives or sensitive information are at stake, as it helps users, regulators, and stakeholders comprehend the rationale behind AI-generated outcomes.*
   
 # White Box and Black Box
 ## White Box:
