@@ -4,4 +4,3 @@
 ### Sources:
 - TechDispatch #2/2023 - Explainable Artificial Intelligence: https://www.edps.europa.eu/system/files/2023-11/23-11-16_techdispatch_xai_en.pdf
 - EU Artificial Intelligence Act: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
-- 
