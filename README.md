@@ -1,6 +1,6 @@
 # [First-Steps-Python](https://github.com/asofcs/First-Steps-Python)
 
-## Basics_4: Multiclass Model and sklearn.datasets
+## Basics 4: Multiclass Model and sklearn.datasets
 ### Sources:
 - Multiclass and multioutput algorithms: https://scikit-learn.org/stable/modules/multiclass.html
 - sklearn.datasets: https://scikit-learn.org/stable/datasets.html#datasets
