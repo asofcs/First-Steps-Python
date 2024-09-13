@@ -1,4 +1,4 @@
-# [First_Steps_Python](https://github.com/asofcs/First_Steps_Python)
+# [First-Steps-Python](https://github.com/asofcs/First-Steps-Python)
 
 ## Basics_2: Classes and Exceptions
 ### Sources:
