@@ -44,7 +44,6 @@ class pandasDataframe:
     #  __assign_col: fill column with index icol (private).
     #  __assign_values: fill dataframe by columns (private).
     #  fill_df: includes __add_attributes, __assign_dim, __assign_values (public).
-    #  __del__: destructor.
 
 
     # return: -
