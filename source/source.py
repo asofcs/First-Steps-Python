@@ -168,13 +168,3 @@ class pandasDataframe:
         self.__add__attributes(name, ncols, nindex,values)
         self.__assign_dim()
         self.__assign_values()
-
-        
-    def  __del__(self):
-        del self.name
-        del self.ncols
-        del self.nindex
-        del self.values 
-        del self.df
-        del self
-
